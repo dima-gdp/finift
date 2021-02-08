@@ -1,0 +1,123 @@
+.hero {
+	// .hero__container
+	&__container {
+		position: relative;
+		display: flex;
+		background: $main-bg;
+	}
+	// .hero__top
+	&__top {
+	}
+	// .hero__slider
+	&__slider {
+	}
+	// .hero__slide
+	&__slide {
+	}
+	// .hero__control
+	&__control {
+	}
+	// .hero__slide-title
+	&__slide-title {
+	}
+}
+
+.top-hero {
+	position: absolute;
+	top: 124px;
+	left: 0;
+	z-index: 3;
+	padding-left: 122px;
+	// .top-hero__title
+	&__title {
+		margin-bottom: 25px;
+		font-family: "Bradobrei";
+		font-size: 72px;
+		line-height: 1.14;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	// .top-hero__subtitle
+	&__subtitle {
+		font-family: "Bradobrei";
+		font-size: 72px;
+		line-height: 1.14;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.slide-hero {
+	display: flex;
+	// .slide-hero__left
+	&__left {
+	}
+	// .slide-hero__right
+	&__right {
+	}
+}
+.left-slide-hero {
+	margin-right: 60px;
+	position: relative;
+	padding-top: 202px;
+	padding-bottom: 25px;
+	max-width: 405px;
+	width: 100%;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 76%;
+		background: url("../img/slider-bg.jpg") center / cover no-repeat;
+	}
+	// .left-slide-hero__img
+	&__img {
+		position: relative;
+		z-index: 1;
+	}
+}
+.right-slide-hero {
+	padding-top: 57px;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	// .right-slide-hero__img
+	&__img {
+		max-width: 626px;
+		width: 100%;
+	}
+	// .right-slide-hero__btn
+	&__btn {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #ffffff;
+		border: 1px solid #ffffff;
+		min-height: 65px;
+		width: 328px;
+	}
+}
+
+.control-hero {
+	max-width: 212px;
+	padding-bottom: 65px;
+	margin-right: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	// .control-hero__text
+	&__text {
+		font-size: 18px;
+		line-height: 1.56;
+		color: #ffffff;
+	}
+	// .control-hero__pagination
+	&__pagination {
+	}
+}
