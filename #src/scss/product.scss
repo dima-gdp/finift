@@ -1,0 +1,232 @@
+.product {
+	// .product__container
+	&__container {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+	// .product__flex
+	&__flex {
+		display: flex;
+	}
+	// .product__left
+	&__left {
+		width: 100%;
+		max-width: 720px;
+		margin-right: 64px;
+	}
+	// .product__right
+	&__right {
+		max-width: 590px;
+		width: 100%;
+		padding-top: 50px;
+	}
+}
+
+.product-gal {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 60px;
+	// .product-gal__item
+	&__item {
+		position: relative;
+		padding-bottom: 150.3%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			font-family: "object-fit: cover; object-position: center;";
+		}
+	}
+}
+.product-info {
+	// position: fixed;
+	// .product-info__title
+	&__title {
+		margin-bottom: 30px;
+	}
+	// .product-info__subtitle
+	&__subtitle {
+		margin-bottom: 35px;
+		font-size: 12px;
+		line-height: 2;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #000000;
+	}
+	// .product-info__content
+	&__content {
+		margin-bottom: 27px;
+		padding: 23px 0;
+		border-top: 1px solid #c4c4c4;
+		border-bottom: 1px solid #c4c4c4;
+	}
+	// .product-info__price
+	&__price {
+		margin-bottom: 46px;
+		display: flex;
+		align-items: center;
+	}
+	// .product-info__old
+	&__old {
+		margin-right: 25px;
+		font-size: 18px;
+		line-height: 1.33;
+		text-decoration-line: line-through;
+		text-transform: uppercase;
+		color: #000000;
+	}
+	// .product-info__new
+	&__new {
+		font-size: 24px;
+		line-height: 1.33;
+		font-weight: 700;
+	}
+	// .product-info__btn
+	&__btn {
+		color: #a98e80;
+		min-height: 65px;
+		width: 303px;
+		border: 1px solid #a98e80;
+	}
+}
+
+.similar {
+	background: #f5e6e0;
+	padding-top: 125px;
+	padding-bottom: 70px;
+	// .similar__title
+	&__title {
+		margin-bottom: 60px;
+	}
+	// .similar__slider
+	&__slider {
+		overflow: hidden;
+		padding-bottom: 110px;
+	}
+
+	.swiper-slide {
+		&:nth-child(2n) {
+			padding-top: 144px;
+		}
+	}
+}
+
+.swiper-wrapper {
+}
+
+.product-slide {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	&:hover {
+		.product-slide__decor {
+			transform: scale(1);
+		}
+		.product-slide__image::before {
+			opacity: 1;
+		}
+		.product-slide__image span {
+			opacity: 1;
+		}
+	}
+	// .product-slide__descr
+	&__descr {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 18px;
+		&::before {
+			content: "";
+			width: 1px;
+			height: 30px;
+			background: #000;
+		}
+	}
+	// .product-slide__title
+	&__title {
+		font-family: "Bradobrei";
+		font-size: 24px;
+		line-height: 1.5;
+		color: #000000;
+	}
+	// .product-slide__subtitle
+	&__subtitle {
+		font-size: 12px;
+		line-height: 2;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #715648;
+	}
+	// .product-slide__price
+	&__price {
+		font-size: 14px;
+		line-height: 1.7;
+		color: #000000;
+	}
+	// .product-slide__image
+	&__image {
+		position: relative;
+		padding-bottom: 136.4%;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.3);
+			z-index: 2;
+			opacity: 0;
+			transition: 0.3s;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			font-family: "object-fit: cover; object-position: center;";
+		}
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 12px;
+			text-decoration-line: underline;
+			text-transform: uppercase;
+			color: #ffffff;
+			opacity: 0;
+			transition: 0.3s;
+			z-index: 6;
+		}
+	}
+
+	&__decor {
+		position: absolute;
+		top: calc(100% - 103px);
+		left: calc(50% - 103px);
+		width: 207px;
+		height: 207px;
+		background: #aa8f82;
+		border-radius: 100%;
+		overflow: hidden;
+		z-index: 5;
+		transition: transform 0.3s;
+		transform: scale(0);
+	}
+}
+.to-cart {
+	// .to-cart__icon
+	&__icon {
+	}
+	// .to-cart__text
+	&__text {
+	}
+}

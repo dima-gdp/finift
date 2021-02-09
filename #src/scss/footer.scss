@@ -1,0 +1,114 @@
+.footer {
+	background: #ddb7a9;
+	padding-top: 81px;
+	padding-bottom: 87px;
+	// .footer__container
+	&__container {
+		display: flex;
+		@media (max-width: 1215px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .footer__nav
+	&__nav {
+	}
+}
+
+.nav-footer {
+	max-width: 219px;
+	margin-right: 75px;
+	@media (max-width: 1215px) {
+		margin-right: 0;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	// .nav-footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	// .nav-footer__link
+	&__link {
+		font-size: 18px;
+		line-height: 1.56;
+		color: #632c33;
+		@media (max-width: 1320px) {
+			font-size: 16px;
+		}
+		@media (max-width: 1215px) {
+			@include adaptiv(font-size, 18, 15, 1215, 320);
+		}
+	}
+}
+.contacts-footer {
+	margin-right: 40px;
+	max-width: 320px;
+	@media (max-width: 1215px) {
+		margin-right: 0;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	// .contacts-footer__tels
+	&__tels {
+		margin-bottom: 40px;
+		li {
+			a {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 1.67;
+				color: #632c33;
+				@media (max-width: 1320px) {
+					font-size: 20px;
+				}
+				@media (max-width: 1215px) {
+					@include adaptiv(font-size, 24, 15, 1215, 320);
+				}
+			}
+		}
+	}
+	// .contacts-footer__adress
+	&__adress {
+		font-size: 18px;
+		line-height: lh(28, 18);
+		color: #632c33;
+		@media (max-width: 1320px) {
+			font-size: 16px;
+		}
+		@media (max-width: 1215px) {
+			@include adaptiv(font-size, 18, 15, 1215, 320);
+		}
+	}
+}
+.text-footer {
+	margin-left: auto;
+	max-width: 500px;
+	@media (max-width: 1530px) {
+		max-width: 300px;
+	}
+	@media (max-width: 1320px) {
+		max-width: 250px;
+	}
+	@media (max-width: 1215px) {
+		max-width: 500px;
+		margin-left: 0;
+		text-align: center;
+	}
+	// .text-footer__item
+	&__item {
+		font-size: 14px;
+		line-height: 1.7;
+		color: #632c33;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: 1530px) {
+			font-size: 13px;
+		}
+
+		@media (max-width: 1215px) {
+			font-size: 14px;
+		}
+	}
+}

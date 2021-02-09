@@ -1,10 +1,12 @@
 .second {
 	padding-top: 115px;
-	margin-right: -60px;
+	padding-bottom: 92px;
+	background: #f5e6e0;
 	// .second__flex
 	&__flex {
 		display: flex;
 		justify-content: space-between;
+		margin-right: -60px;
 	}
 	// .second__left
 	&__left {
@@ -17,6 +19,8 @@
 .left-second {
 	margin-right: 50px;
 	flex: 0 0 43.6%;
+	position: relative;
+	z-index: 2;
 	// .left-second__title
 	&__title {
 		margin-bottom: 20px;
@@ -69,6 +73,8 @@
 	padding-bottom: 80px;
 	max-width: 780px;
 	width: 100%;
+	position: relative;
+	z-index: 2;
 	// .right-second__title
 	&__title {
 		margin-bottom: 20px;
@@ -146,6 +152,7 @@
 	// .right-second-master__master
 	&__master {
 		padding: 23px 15px;
+		text-align: center;
 	}
 	// .right-second-master__name
 	&__name {

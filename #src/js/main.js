@@ -1,10 +1,32 @@
 $(document).ready(function () {
 	objectFitImages();
 
+	// Menu
 	$('.nav-header-top__link').click(function (ev) {
 		ev.preventDefault()
 		$(ev.target).next('.submenu').addClass('submenu--active')
 	})
+
+	// let productGal = $('.product-gal')
+	// let productInfo = $('.product-info')
+	// let heightGal = $('.product-gal').innerHeight()
+	// let heightInfo = $('.product-info').innerHeight()
+
+	// $(document).on('scroll', function () {
+	// 	if ($(document).scrollTop() > 60 && $(document).scrollTop() < heightGal - heightInfo) {
+	// 		productInfo.css('position', 'fixed')
+	// 	}
+	// 	else {
+	// 		productInfo.css('position', 'absolute')
+	// 		productInfo.css('top', `${$(document).scrollTop()}px`)
+	// 	}
+
+	// 	console.log($('.product-gal').innerHeight())
+	// })
+
+
+
+
 
 	// Табы
 	// function tabs(buttonsList, wrapper, tabBlock) {
@@ -14,20 +36,22 @@ $(document).ready(function () {
 	// 	})
 	// }
 
-	// function toggleTabs(top, bottom, topActive) {
-	// 	$(top).on('click', function (ev) {
-	// 		let text = $(this).next(bottom);
+	function toggleTabs(top, bottom, topActive) {
+		$(top).on('click', function (ev) {
+			let text = $(this).next(bottom);
 
-	// 		if ($(this).hasClass(topActive)) {
-	// 			text.stop().slideUp();
-	// 			$(this).removeClass(topActive)
-	// 		}
-	// 		else {
-	// 			$(this).addClass(topActive)
-	// 			text.stop().slideDown();
-	// 		}
-	// 	})
-	// }
+			if ($(this).hasClass(topActive)) {
+				text.stop().slideUp();
+				$(this).removeClass(topActive)
+			}
+			else {
+				$(this).addClass(topActive)
+				text.stop().slideDown();
+			}
+		})
+	}
+
+	toggleTabs('.item-delivery__top', '.item-delivery__bot', 'item-delivery__top--active')
 
 
 	// Swiper
@@ -66,15 +90,28 @@ $(document).ready(function () {
 		// }
 	});
 
+	const slider_product = new Swiper('.similar__slider', {
+		slidesPerView: 4,
+		spaceBetween: 60,
+		loop: true,
+		mousewheel: true,
+	});
+
+	const slider_catalog = new Swiper('.catalog__slider', {
+		slidesPerView: 4,
+		spaceBetween: 60,
+		loop: true,
+		mousewheel: true,
+	});
+
 
 	// Fancy-box
 
-	// $('[data-fancybox="to-modal"]').fancybox({
-	// 	src: '#modal',
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-buy"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
 	// $('[data-fancybox="to-privacy"]').fancybox({
 	// 	src: '#modal',
@@ -105,25 +142,28 @@ $(document).ready(function () {
 	// })
 
 	// Яндекс карта
-	// ymaps.ready(function () {
-	// 	var myMap = new ymaps.Map(getMap, {
-	// 		center: [52.05693880953456, 118.68705543322154],
-	// 		zoom: 4
-	// 	});
+	if (document.getElementById('map')) {
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+				center: [59.21453736676941, 39.89706232681222],
+				zoom: 16
+			});
 
-	// 	var myPlacemark = new ymaps.Placemark([55.54055193739615, 108.71146949572154], {
-	// 		hintContent: 'г. Борисоглебск, ул. Победы, д. 66',
-	// 		balloonContent: 'г. Борисоглебск, ул. Победы, д. 66'
-	// 	},
-	// 		{
-	// 			preset: 'islands#redIcon',
-	// 			iconLayout: 'default#image',
-	// 			iconImageSize: [20, 28],
-	// 			iconImageOffset: [-19, -52]
-	// 		});
+			var myPlacemark = new ymaps.Placemark([59.21453736676941, 39.89706232681222], {
+				hintContent: 'Козленская улица, 43Ак2',
+				balloonContent: 'Козленская улица, 43Ак2'
+			},
+				{
+					preset: 'islands#redIcon',
+					iconLayout: 'default#image',
+					iconImageSize: [20, 28],
+					// iconImageOffset: [-19, -52]
+				});
 
-	// 	myMap.geoObjects.add(myPlacemark);
-	// });
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
+
 
 
 	// Alertify

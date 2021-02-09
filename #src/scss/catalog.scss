@@ -1,0 +1,20 @@
+.catalog {
+	padding-bottom: 50px;
+	background: #d2b6a8;
+	// .catalog__title
+	&__title {
+		margin-bottom: 32px;
+		color: #fff;
+	}
+	// .catalog__slider
+	&__slider {
+		overflow: hidden;
+		padding-bottom: 110px;
+	}
+
+	.swiper-slide {
+		&:nth-child(2n) {
+			padding-top: 144px;
+		}
+	}
+}

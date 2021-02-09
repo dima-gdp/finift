@@ -10,6 +10,7 @@
 	}
 	// .hero__slider
 	&__slider {
+		overflow: hidden;
 	}
 	// .hero__slide
 	&__slide {
@@ -64,8 +65,7 @@
 	position: relative;
 	padding-top: 202px;
 	padding-bottom: 25px;
-	max-width: 405px;
-	width: 100%;
+	width: 39%;
 	&::before {
 		content: "";
 		position: absolute;
@@ -88,13 +88,15 @@
 	align-items: flex-end;
 	// .right-slide-hero__img
 	&__img {
-		max-width: 626px;
-		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
 	}
 	// .right-slide-hero__btn
 	&__btn {
 		position: absolute;
-		top: 60%;
+		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #ffffff;
