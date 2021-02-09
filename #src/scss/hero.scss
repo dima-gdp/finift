@@ -108,6 +108,7 @@
 
 .control-hero {
 	max-width: 212px;
+	width: 100%;
 	padding-bottom: 65px;
 	margin-right: 40px;
 	display: flex;
@@ -115,11 +116,46 @@
 	justify-content: flex-end;
 	// .control-hero__text
 	&__text {
+		margin-bottom: 38px;
 		font-size: 18px;
 		line-height: 1.56;
 		color: #ffffff;
 	}
 	// .control-hero__pagination
 	&__pagination {
+		display: flex;
+		.swiper-pagination-bullet {
+			width: auto;
+			height: auto;
+			display: block;
+			background: transparent;
+			border-radius: 0;
+			position: relative;
+			padding-top: 82px;
+			font-size: 18px;
+			color: #ffffff;
+			opacity: 0.5;
+			transition: 0.3s;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 1px;
+				height: 35px;
+				background: #fff;
+				transition: 0.3s;
+			}
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+			&::before {
+				height: 70px;
+			}
+		}
 	}
 }

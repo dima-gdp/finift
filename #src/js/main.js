@@ -58,10 +58,18 @@ $(document).ready(function () {
 	const slider_pag = new Swiper('.hero__slider', {
 		slidesPerView: 1,
 		spaceBetween: 20,
+		effect: 'fade',
+		speed: 500,
+		fadeEffect: {
+			crossFade: true
+		},
 		loop: false,
 		pagination: {
 			el: '.control-hero__pagination',
-			type: 'bullets',
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			}
 		},
 		// loopedSlides: 1,
 		// slideToClickedSlide: true,
