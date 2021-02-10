@@ -4,8 +4,30 @@ $(document).ready(function () {
 	// Menu
 	$('.nav-header-top__link').click(function (ev) {
 		ev.preventDefault()
-		$(ev.target).next('.submenu').addClass('submenu--active')
+		$('.submenu-main').removeClass('submenu-main--active')
+		$(ev.target).next('.submenu-main').addClass('submenu-main--active')
 	})
+
+	const burger = $('.mob-header__btn')
+	const mobMenu = $('.mob-menu');
+	const mobMenuMoving = $('.mob-menu__moving');
+	const mobMenuContainer = $('.mob-menu__container');
+
+	$('.top-nav__link').click(function (ev) {
+		ev.preventDefault()
+		$(ev.target).next('.submenu').addClass('submenu--active')
+		mobMenuMoving.addClass('transform')
+		mobMenuContainer.scrollTop(0)
+	})
+
+	$('.submenu__back').click(function (ev) {
+		ev.preventDefault()
+		$(ev.target).closest('.submenu__header').closest('.submenu').removeClass('submenu--active')
+		mobMenuMoving.removeClass('transform')
+		mobMenuContainer.scrollTop(0)
+
+	})
+
 
 	// let productGal = $('.product-gal')
 	// let productInfo = $('.product-info')
@@ -57,45 +79,27 @@ $(document).ready(function () {
 	// Swiper
 	const slider_pag = new Swiper('.hero__slider', {
 		slidesPerView: 1,
-		spaceBetween: 20,
 		effect: 'fade',
 		speed: 500,
 		fadeEffect: {
 			crossFade: true
 		},
 		loop: false,
-		pagination: {
-			el: '.control-hero__pagination',
-			clickable: true,
-			renderBullet: function (index, className) {
-				return '<span class="' + className + '">' + (index + 1) + '</span>';
-			}
+		navigation: {
+			nextEl: '.hero__btn-n',
+			prevEl: '.hero__btn-p',
 		},
-		// loopedSlides: 1,
-		// slideToClickedSlide: true,
-		// breakpoints: {
-		// 	320: {
-		// 		spaceBetween: 15,
-		// 	},
-		// 	374: {
-		// 		spaceBetween: 25,
-		// 	},
-		// 	577: {
-		// 		spaceBetween: 35,
-		// 	},
-		// 	625: {
-		// 		spaceBetween: 40,
-		// 	},
-		// 	769: {
-		// 		spaceBetween: 15,
-		// 	},
-		// 	993: {
-		// 		spaceBetween: 30,
-		// 	},
-		// 	1440: {
-		// 		spaceBetween: 45,
-		// 	},
-		// }
+		breakpoints: {
+			993: {
+				pagination: {
+					el: '.control-hero__pagination',
+					clickable: true,
+					renderBullet: function (index, className) {
+						return '<div class="' + className + '">' + '<span>' + (index + 1) + '</span></div>';
+					}
+				},
+			},
+		}
 	});
 
 	const slider_product = new Swiper('.similar__slider', {
@@ -135,19 +139,24 @@ $(document).ready(function () {
 
 
 	// Menu-burger
-	// burger.click(function () {
-	// 	mobMenu.addClass('active')
-	// })
+	burger.click(function () {
+		mobMenu.addClass('active')
+	})
 
-	// $('.mob-menu__close').click(function () {
-	// 	mobMenu.removeClass('active')
-	// })
+	$('.mob-menu__close').click(function () {
+		mobMenu.removeClass('active')
+	})
 
-	// $(document).click(function (ev) {
-	// 	if (!ev.target.closest('.header__burger') && !ev.target.closest('h1')) {
-	// 		mobMenu.removeClass('active')
-	// 	}
-	// })
+	console.log(mobMenu)
+
+	$(document).click(function (ev) {
+		if (!ev.target.closest('.mob-header__btn') && !ev.target.closest('.mob-menu__container')) {
+			mobMenu.removeClass('active')
+		}
+		if (!ev.target.closest('.header')) {
+			$('.submenu-main').removeClass('submenu-main--active')
+		}
+	})
 
 	// Яндекс карта
 	if (document.getElementById('map')) {

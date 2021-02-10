@@ -2,11 +2,30 @@
 	padding-top: 115px;
 	padding-bottom: 92px;
 	background: #f5e6e0;
+	@media (max-width: 1320px) {
+		@include adaptiv(padding-top, 115, 45, 1320, 320);
+	}
+	@media (max-width: 992px) {
+		padding-bottom: 0;
+	}
 	// .second__flex
 	&__flex {
 		display: flex;
 		justify-content: space-between;
 		margin-right: -60px;
+		@media (max-width: 1320px) {
+			margin-right: -40px;
+		}
+		@media (max-width: 992px) {
+			flex-direction: column;
+			margin-right: 0;
+			margin-right: -40px;
+			margin-left: -40px;
+		}
+		@media (max-width: 576px) {
+			margin-right: -20px;
+			margin-left: -20px;
+		}
 	}
 	// .second__left
 	&__left {
@@ -20,7 +39,21 @@
 	margin-right: 50px;
 	flex: 0 0 43.6%;
 	position: relative;
-	z-index: 2;
+	z-index: 5;
+	@media (max-width: 1440px) {
+		margin-right: 35px;
+	}
+	@media (max-width: 992px) {
+		margin-right: 0;
+		flex: 0 0 auto;
+		margin-bottom: 55px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media (max-width: 576px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	// .left-second__title
 	&__title {
 		margin-bottom: 20px;
@@ -29,11 +62,20 @@
 	// .left-second__subtitle
 	&__subtitle {
 		margin-bottom: 10px;
+		@media (max-width: 1920px) {
+			p,
+			li {
+				@include adaptiv(font-size, 20, 17, 1920, 1320);
+			}
+		}
 	}
 	// .left-second__table
 	&__table {
 		display: flex;
 		border-top: 1px solid #aa8f82;
+		@media (max-width: 685px) {
+			flex-direction: column;
+		}
 	}
 	// .left-second__column
 	&__column {
@@ -46,6 +88,28 @@
 		&:last-child {
 			padding-left: 37px;
 		}
+		@media (max-width: 1520px) and (min-width: 993px) {
+			padding-top: 15px;
+			&:first-child {
+				padding-right: 10px;
+			}
+			&:last-child {
+				padding-left: 10px;
+			}
+		}
+		@media (max-width: 685px) {
+			flex: 0 0 auto;
+			padding-top: 23px;
+			&:first-child {
+				padding-bottom: 27px;
+				padding-right: 0;
+				border-right: none;
+			}
+			&:last-child {
+				padding-left: 0;
+				border-top: 1px solid #aa8f82;
+			}
+		}
 	}
 }
 
@@ -57,12 +121,19 @@
 		line-height: 1.5;
 		text-transform: uppercase;
 		color: #000000;
+		@media (max-width: 1520px) and (min-width: 993px) {
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
 	}
 	// .left-table__subtitle
 	&__subtitle {
 		font-size: 16px;
 		line-height: 1.5;
 		color: #000000;
+		@media (max-width: 1520px) {
+			font-size: 15px;
+		}
 	}
 }
 .right-second {
@@ -74,7 +145,35 @@
 	max-width: 780px;
 	width: 100%;
 	position: relative;
-	z-index: 2;
+	z-index: 5;
+	@media (max-width: 1520px) and (min-width: 1321px) {
+		padding-top: 60px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 60px;
+	}
+	@media (max-width: 1100px) and (min-width: 993px) {
+		padding-top: 60px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 60px;
+	}
+	@media (max-width: 992px) {
+		flex: 0 0 auto;
+		max-width: none;
+	}
+
+	@media (max-width: 768px) {
+		padding-top: 48px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 0;
+	}
+	@media (max-width: 420px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
 	// .right-second__title
 	&__title {
 		margin-bottom: 20px;
@@ -83,13 +182,33 @@
 	}
 	// .right-second__subtitle
 	&__subtitle {
-		margin-bottom: 60px;
-		text-align: center;
+		margin-bottom: 35px;
 		color: $light-text;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		p {
+			text-align: center;
+		}
+		@media (max-width: 1920px) {
+			p,
+			li {
+				@include adaptiv(font-size, 20, 17, 1920, 1320);
+			}
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 15px;
+		}
+		@media (max-width: 420px) {
+			margin-bottom: 10px;
+		}
 	}
 	// .right-second__flex
 	&__flex {
 		display: flex;
+		@media (max-width: 576px) {
+			flex-direction: column;
+		}
 	}
 	// .right-second__left
 	&__left {
@@ -103,25 +222,52 @@
 	margin-right: 50px;
 	border-top: 1px solid #753e42;
 	flex: 0 0 45.4%;
+	@media (max-width: 1520px) and (min-width: 993px) {
+		padding-top: 30px;
+		margin-right: 30px;
+	}
+	@media (max-width: 576px) {
+		order: 1;
+		margin-right: 0;
+		padding-top: 40px;
+		text-align: center;
+	}
 	// .right-second-sign__title
 	&__title {
 		margin-bottom: 30px;
 		font-size: 20px;
 		line-height: 30px;
 		color: $light-text;
+		@media (max-width: 1920px) {
+			@include adaptiv(font-size, 20, 16, 1920, 1320);
+		}
+		@media (max-width: 992px) {
+			@include adaptiv(font-size, 20, 15, 992, 320);
+		}
 	}
 	// .right-second-sign__image
 	&__image {
 		text-align: right;
+		max-width: 235px;
 		img {
-			max-width: 235px;
 			max-height: 129px;
+			margin: 0 auto;
+		}
+		@media (max-width: 576px) {
+			text-align: center;
+			margin: 0 auto;
 		}
 	}
 }
 .right-second-master {
 	border: 1px solid #753e42;
 	flex: 0 0 45.4%;
+	@media (max-width: 1520px) {
+		flex: 0 0 47%;
+	}
+	@media (max-width: 576px) {
+		order: 0;
+	}
 	// .right-second-master__top
 	&__top {
 		padding: 29px 0;
@@ -129,6 +275,9 @@
 		justify-content: center;
 		align-items: center;
 		border-bottom: 1px solid #753e42;
+		@media (max-width: 576px) {
+			padding: 18px 0;
+		}
 	}
 	// .right-second-master__image
 	&__image {
@@ -138,6 +287,11 @@
 		border-radius: 100%;
 		position: relative;
 		overflow: hidden;
+		@media (max-width: 1520px) and (min-width: 993px) {
+			flex: 0 0 100px;
+			width: 100px;
+			height: 100px;
+		}
 		img {
 			position: absolute;
 			top: 0;
@@ -153,6 +307,9 @@
 	&__master {
 		padding: 23px 15px;
 		text-align: center;
+		@media (max-width: 576px) {
+			padding: 20px 15px;
+		}
 	}
 	// .right-second-master__name
 	&__name {
@@ -162,11 +319,30 @@
 		line-height: 1.87;
 		text-transform: uppercase;
 		color: #ffffff;
+		@media (max-width: 1920px) {
+			@include adaptiv(font-size, 16, 13, 1920, 1320);
+		}
+		@media (max-width: 1320px) {
+			font-size: 16px;
+		}
+		@media (max-width: 650px) {
+			font-size: 15px;
+		}
+		@media (max-width: 576px) {
+			font-size: 16px;
+			margin-bottom: 0;
+		}
 	}
 	// .right-second-master__postion
 	&__postion {
 		font-size: 16px;
 		line-height: lh(30, 16);
 		color: $light-text;
+		@media (max-width: 1920px) {
+			@include adaptiv(font-size, 16, 14, 1920, 1320);
+		}
+		@media (max-width: 1320px) {
+			font-size: 16px;
+		}
 	}
 }

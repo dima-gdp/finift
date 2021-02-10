@@ -4,12 +4,26 @@
 	width: 100%;
 	padding-left: 300px;
 	position: relative;
+	@media (max-width: 1320px) {
+		padding-left: 0;
+	}
 }
 
 .container {
 	max-width: 1620px;
 	padding: 0 60px;
 	margin: 0 auto;
+	@media (max-width: 1320px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media (max-width: 576px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.swiper-button-disabled {
+	display: none;
 }
 
 html,
@@ -125,6 +139,12 @@ body {
 	font-size: 30px;
 	line-height: 1.33;
 	text-transform: uppercase;
+	@media (max-width: 1920px) {
+		@include adaptiv(font-size, 30, 23, 1920, 1320);
+	}
+	@media (max-width: 1320px) {
+		@include adaptiv(font-size, 27, 15, 1920, 320);
+	}
 }
 
 div.wpcf7-response-output,
