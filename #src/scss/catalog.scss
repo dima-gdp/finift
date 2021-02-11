@@ -1,6 +1,9 @@
 .catalog {
 	padding-bottom: 50px;
 	background: #d2b6a8;
+	@media (max-width: 768px) {
+		padding-bottom: 76px;
+	}
 	// .catalog__title
 	&__title {
 		margin-bottom: 32px;
@@ -10,11 +13,81 @@
 	&__slider {
 		overflow: hidden;
 		padding-bottom: 110px;
+		@media (max-width: 1199px) {
+			padding-bottom: 50px;
+		}
+		@media (max-width: 768px) {
+			overflow: auto;
+			margin: 0px -20px 0px -20px;
+		}
+		@media (max-width: 576px) {
+			margin: 0px -10px 0px -10px;
+		}
+		@media (max-width: 420px) {
+			margin: 0px -5px 0px -5px;
+		}
+	}
+
+	.swiper-wrapper {
+		@media (max-width: 768px) {
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 
 	.swiper-slide {
+		@media (max-width: 768px) {
+			padding: 0px 20px 40px 20px;
+			flex: 0 0 50%;
+			width: 50%;
+		}
+
+		@media (max-width: 576px) {
+			padding: 0px 10px 30px 10px;
+		}
+
+		@media (max-width: 420px) {
+			padding: 0px 5px 30px 5px;
+		}
+		@media (max-width: 374px) {
+			flex: 0 0 100%;
+			width: 100%;
+		}
+
 		&:nth-child(2n) {
 			padding-top: 144px;
+
+			@media (max-width: 1920px) {
+				@include adaptiv(padding-top, 144, 40, 1920, 768);
+			}
+			@media (max-width: 768px) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	&__btn {
+		display: none;
+		color: #ffffff;
+		border: 1px solid #ffffff;
+		min-height: 65px;
+		max-width: 336px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		@media (max-width: 768px) {
+			display: flex;
+		}
+		@media (max-width: 374px) {
+			min-height: 55;
+			font-size: 16px;
+		}
+	}
+
+	.product-slide__descr::before {
+		@media (max-width: 576px) {
+			margin-bottom: 10px;
 		}
 	}
 }

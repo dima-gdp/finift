@@ -1,7 +1,21 @@
 @@include('header.html')
-
-<div class="main">
-	<div class="container--big">
+<div class="mob-header">
+	<div class="mob-header__container container">
+		<a href="#" class="header__logo logo">
+			<div class="logo__img">
+				<img src="img/logo.svg" alt="">
+			</div>
+			<div class="logo__text">
+				<div class="logo__title">Вологодская финифть
+				</div>
+				<div class="logo__subtitle">Авторские изделия ручной работы</div>
+			</div>
+		</a>
+		<button class="mob-header__btn">МЕНЮ</button>
+	</div>
+</div>
+<div class="main main--flex">
+	<div class="container--big flex">
 		<header class="header">
 			<div class="header__container container">
 				<a href="#" class="header__logo logo">
@@ -122,6 +136,7 @@
 		<section class="contacts__container container">
 			<div class="contacts__flex">
 				<div class="contacts__left">
+					@@include('breadcrumbs.html')
 					<h1 class="contacts__title title">Контакты</h1>
 					<div class="contacts__block">
 						<div class="contacts__adress">

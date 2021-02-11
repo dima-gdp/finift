@@ -1,6 +1,22 @@
 @@include('header.html')
 
-<div class="main">
+<div class="mob-header">
+	<div class="mob-header__container container">
+		<a href="#" class="header__logo logo">
+			<div class="logo__img">
+				<img src="img/logo.svg" alt="">
+			</div>
+			<div class="logo__text">
+				<div class="logo__title">Вологодская финифть
+				</div>
+				<div class="logo__subtitle">Авторские изделия ручной работы</div>
+			</div>
+		</a>
+		<button class="mob-header__btn">МЕНЮ</button>
+	</div>
+</div>
+
+<div class="main main--bg">
 	<div class="container--big">
 		<header class="header">
 			<div class="header__container container">
@@ -120,6 +136,8 @@
 		</header>
 
 		<section class="catalog container">
+			@@include('breadcrumbs.html')
+
 			<h1 class="catalog__title title">Серьги</h1>
 			<div class="catalog__slider">
 				<div class="swiper-wrapper">
@@ -128,7 +146,10 @@
 							<div class="product-slide__descr">
 								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
 								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<span class="product-slide__price">6500 ₽</span>
+								<div class="product-slide__price">
+									<span class="product-slide__old">7500 ₽</span>
+									<span class="product-slide__new">6500 ₽</span>
+								</div>
 							</div>
 							<div class="product-slide__image">
 								<img src="img/product-slide-1jpg.jpg" alt="">
@@ -147,10 +168,13 @@
 							<div class="product-slide__descr">
 								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
 								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<span class="product-slide__price">6500 ₽</span>
+								<div class="product-slide__price">
+									<span class="product-slide__old">7500 ₽</span>
+									<span class="product-slide__new">6500 ₽</span>
+								</div>
 							</div>
 							<div class="product-slide__image">
-								<img src="img/product-slide-2.jpg" alt="">
+								<img src="img/product-slide-1jpg.jpg" alt="">
 								<span>подробнее</span>
 							</div>
 							<div class="product-slide__decor">
@@ -166,10 +190,13 @@
 							<div class="product-slide__descr">
 								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
 								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<span class="product-slide__price">6500 ₽</span>
+								<div class="product-slide__price">
+									<span class="product-slide__old">7500 ₽</span>
+									<span class="product-slide__new">6500 ₽</span>
+								</div>
 							</div>
 							<div class="product-slide__image">
-								<img src="img/product-slide-3.jpg" alt="">
+								<img src="img/product-slide-1jpg.jpg" alt="">
 								<span>подробнее</span>
 							</div>
 							<div class="product-slide__decor">
@@ -185,10 +212,13 @@
 							<div class="product-slide__descr">
 								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
 								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<span class="product-slide__price">6500 ₽</span>
+								<div class="product-slide__price">
+									<span class="product-slide__old">7500 ₽</span>
+									<span class="product-slide__new">6500 ₽</span>
+								</div>
 							</div>
 							<div class="product-slide__image">
-								<img src="img/product-slide-4.jpg" alt="">
+								<img src="img/product-slide-1jpg.jpg" alt="">
 								<span>подробнее</span>
 							</div>
 							<div class="product-slide__decor">
@@ -200,7 +230,9 @@
 						</a>
 					</div>
 				</div>
+
 			</div>
+			<a href="#" class="catalog__btn btn">Показать еще</a>
 		</section>
 	</div>
 </div>

@@ -9,7 +9,7 @@
 			@include adaptiv(font-size, 36, 25, 1200, 320);
 		}
 		@media (max-width: 992px) {
-			@include adaptiv(margin-bottom, 35, 20, 992, 320);
+			@include adaptiv(margin-bottom, 35, 23, 992, 320);
 		}
 	}
 	p,

@@ -3,8 +3,10 @@
 	top: 0;
 	left: calc(50% - 960px);
 	width: 300px;
+	height: 100%;
 	z-index: 20;
 	background: $light-color;
+	overflow: auto;
 	@media (max-width: 1920px) {
 		left: 0;
 	}

@@ -1,6 +1,10 @@
 .delivery {
 	// .delivery__container
 	&__container {
+		padding-bottom: 160px;
+		@media (max-width: 1320px) {
+			@include adaptiv(padding-bottom, 160, 70, 1320, 320);
+		}
 	}
 	// .delivery__title
 	&__title {
@@ -26,7 +30,6 @@
 }
 
 .item-delivery {
-	border-top: 1px solid #c4c4c4;
 	&:last-child {
 		border-bottom: 1px solid #c4c4c4;
 	}
@@ -38,7 +41,11 @@
 		padding-top: 12px;
 		padding-bottom: 18px;
 		padding-right: 10px;
-		border-bottom: 1px solid #c4c4c4;
+		border-top: 1px solid #c4c4c4;
+		@media (max-width: 576px) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 
 		&--active {
 			.cross {
@@ -56,6 +63,9 @@
 		line-height: 1.5;
 		text-transform: uppercase;
 		color: #000000;
+		@media (max-width: 420px) {
+			font-size: 15px;
+		}
 	}
 	// .item-delivery__btn
 	&__btn {
@@ -64,9 +74,16 @@
 	&__bot {
 		display: none;
 		padding: 36px 4px;
+		@media (max-width: 576px) {
+			padding-top: 25px;
+			padding-bottom: 0;
+		}
 	}
 	// .item-delivery__text
 	&__text {
+		.group {
+			margin-bottom: 45px;
+		}
 		p,
 		h3,
 		h4,
@@ -76,18 +93,13 @@
 		ol,
 		table {
 			margin-bottom: 15px;
-			// @media (max-width: 992px) {
-			// 	@include adaptiv(margin-bottom, 25, 15, 992, 320);
-			// }
 		}
 		p {
 			font-size: 12px;
 			line-height: 1.5;
-			// @media (max-width: 992px) {
-			// 	@include adaptiv(font-size, 18, 15, 992, 320);
-			// }
 		}
 		h2 {
+			margin-bottom: 15px;
 			font-weight: 700;
 			font-size: 12px;
 			line-height: 1.5;
@@ -98,9 +110,7 @@
 			font-size: 12px;
 			line-height: 1.5;
 			text-transform: uppercase;
-			// @media (max-width: 1200px) {
-			// 	@include adaptiv(font-size, 12, 16, 1200, 320);
-			// }
+			margin-bottom: 15px;
 		}
 
 		h4 {
@@ -109,9 +119,6 @@
 			font-size: 12px;
 			line-height: 1.5;
 			text-transform: uppercase;
-			// @media (max-width: 1200px) {
-			// 	@include adaptiv(font-size, 24, 15, 1200, 320);
-			// }
 		}
 
 		h5 {
@@ -119,25 +126,12 @@
 			font-size: 12px;
 			line-height: 1.5;
 			text-transform: uppercase;
-			// @media (max-width: 992px) {
-			// 	@include adaptiv(font-size, 16, 13, 992, 320);
-			// }
 		}
 		ul,
 		ol {
-			// margin-bottom: 15px;
 			li {
 				font-size: 12px;
 				line-height: 1.5;
-				// @media (max-width: 992px) {
-				// 	@include adaptiv(font-size, 20, 15, 992, 320);
-				// }
-				// &:not(:last-child) {
-				// 	margin-bottom: 15px;
-				// 	@media (max-width: 992px) {
-				// 		@include adaptiv(margin-bottom, 15, 7, 992, 320);
-				// 	}
-				// }
 			}
 		}
 
