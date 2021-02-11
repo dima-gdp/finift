@@ -32,6 +32,9 @@
     overflow: auto;
     transform: translateX(110%);
     transition: 0.3s;
+    @media (max-width: 520px) {
+      width: 100%;
+    }
   }
   &__moving {
     flex: 1 1 auto;
@@ -99,10 +102,17 @@
     padding-left: 59px;
     padding-bottom: 49px;
     padding-right: 59px;
+    @media (max-width: 520px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   // .mob-menu__nav-top
   &__nav-top {
     margin-bottom: 60px;
+    @media (max-width: 520px) {
+      margin-bottom: 50px;
+    }
   }
   // .mob-menu__nav-bot
   &__nav-bot {
@@ -115,14 +125,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 520px) {
+      padding: 20px 18px 20px 30px;
+    }
   }
   &__tels {
     display: flex;
     margin-right: 20px;
+
     li {
       &:not(:last-child) {
         margin-right: 9px;
+        @media (max-width: 520px) {
+          margin-right: 0;
+        }
       }
+    }
+
+    @media (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
     }
   }
   // .mob-menu__tel
@@ -137,11 +159,19 @@
     &:hover {
       color: #c5a995;
     }
+    @media (max-width: 520px) {
+      span {
+        display: none;
+      }
+    }
   }
   // .mob-menu__bot
   &__bot {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 520px) {
+      padding-right: 10px;
+    }
   }
   // .mob-menu__btn
   &__btn {
@@ -199,6 +229,9 @@
     line-height: 1.67;
     text-transform: uppercase;
     color: #ffffff;
+    @media (max-width: 520px) {
+      font-size: 17px;
+    }
   }
   // .top-nav__dropdown
   &__dropdown {
@@ -215,6 +248,9 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+  @media (max-width: 520px) {
+    width: 100%;
+  }
 
   // .submenu__header
   &__header {
@@ -227,6 +263,9 @@
     padding-left: 69px;
     padding-right: 25px;
     border-bottom: 1px solid #f2f2f2;
+    @media (max-width: 520px) {
+      padding: 14px 60px 14px 19px;
+    }
   }
   // .submenu__back
   &__back {
@@ -254,11 +293,17 @@
     padding-left: 69px;
     padding-right: 25px;
     padding-bottom: 30px;
+    @media (max-width: 520px) {
+      padding: 40px 20px 40px 20px;
+    }
   }
   // .submenu__item
   &__item {
     &:not(:last-child) {
       margin-bottom: 25px;
+      @media (max-width: 520px) {
+        margin-bottom: 15px;
+      }
     }
     &--active {
       .submenu__link {
@@ -306,6 +351,9 @@
   &__item {
     &:not(:last-child) {
       margin-bottom: 25px;
+      @media (max-width: 520px) {
+        margin-bottom: 15px;
+      }
     }
   }
   // .bot-nav__link
@@ -313,5 +361,8 @@
     font-size: 18px;
     line-height: 1.67;
     color: #ffffff;
+    @media (max-width: 520px) {
+      font-size: 17px;
+    }
   }
 }

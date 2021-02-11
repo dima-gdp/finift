@@ -7,8 +7,8 @@ $(document).ready(function () {
 	// Menu
 	$('.nav-header-top__link').click(function (ev) {
 		ev.preventDefault()
-		$('.submenu-main').removeClass('submenu-main--active')
-		$(ev.target).next('.submenu-main').addClass('submenu-main--active')
+		// $('.submenu-main').removeClass('submenu-main--active')
+		// $(ev.target).next('.submenu-main').addClass('submenu-main--active')
 	})
 
 	const burger = $('.mob-header__btn')
