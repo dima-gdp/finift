@@ -4,6 +4,16 @@
 		position: relative;
 		display: flex;
 		background: $main-bg;
+
+		.swiper-slide-active {
+			.left-slide-hero__img {
+				animation: fadeInDown 0.4s;
+				font-size: 1px;
+			}
+			.right-slide-hero__img {
+				transform: scale(1.1);
+			}
+		}
 	}
 	// .hero__top
 	&__top {
@@ -54,6 +64,7 @@
 	left: 0;
 	z-index: 3;
 	padding-left: 122px;
+	pointer-events: none;
 	@media (max-width: 1920px) {
 		@include adaptiv(padding-left, 122, 39, 1920, 1320);
 		@include adaptiv(top, 124, 50, 1920, 1320);
@@ -101,10 +112,7 @@
 		}
 	}
 }
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+
 .slide-hero {
 	display: flex;
 
@@ -162,16 +170,17 @@
 	}
 }
 .right-slide-hero {
-	padding-top: 57px;
+	margin-top: 57px;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
+	overflow: hidden;
 	@media (max-width: 1320px) {
-		padding-top: 40px;
+		margin-top: 40px;
 	}
 	@media (max-width: 626px) {
 		flex: 0 0 100%;
-		padding-top: 0;
+		margin-top: 0;
 	}
 	// .right-slide-hero__img
 	&__img {
@@ -179,11 +188,12 @@
 		background-size: cover;
 		background-position: center;
 		position: relative;
+		transition: transform 3s linear;
 	}
 	// .right-slide-hero__btn
 	&__btn {
 		position: absolute;
-		top: 50%;
+		top: 60%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #ffffff;

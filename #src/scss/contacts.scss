@@ -21,6 +21,7 @@
 	// .contacts__left
 	&__left {
 		min-height: 650px;
+		padding-bottom: 50px;
 		flex: 0 0 332px;
 		margin-right: 62px;
 		@media (max-width: 992px) {
@@ -29,6 +30,7 @@
 			min-height: 500px;
 		}
 		@media (max-width: 768px) {
+			padding-bottom: 0;
 			min-height: 0;
 			margin-right: 0;
 			flex: 0 0 auto;
@@ -95,7 +97,7 @@
 		}
 		@media (max-width: 576px) {
 			margin-right: -20px;
-			height: 350px;
+			min-height: 300px;
 		}
 	}
 	&__map {

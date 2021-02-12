@@ -554,11 +554,13 @@
 		}
 	}
 }
-.to-cart {
-	// .to-cart__icon
-	&__icon {
-	}
-	// .to-cart__text
-	&__text {
+
+[data-aos="new-animation"] {
+	opacity: 0;
+	transition-property: opacity;
+	// transition-duration: 2s;
+
+	&.aos-animate {
+		opacity: 1;
 	}
 }

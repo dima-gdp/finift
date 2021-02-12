@@ -112,6 +112,7 @@
 			font-size: 20px;
 			color: #000;
 			background: #f5e6e0;
+			resize: none;
 			@media (max-width: 768px) {
 				@include adaptiv(font-size, 20, 16, 768, 320);
 			}

@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	objectFitImages();
+	AOS.init();
 	let slider_catalog;
 	let slider_product_main;
 	const isMousewheel = $(window).innerWidth() <= 1320 ? false : true;
@@ -93,6 +94,9 @@ $(document).ready(function () {
 		slidesPerView: 1,
 		effect: 'fade',
 		speed: 500,
+		autoplay: {
+			delay: 3000,
+		},
 		navigation: {
 			nextEl: '.hero__btn-n',
 			prevEl: '.hero__btn-p',
@@ -231,6 +235,7 @@ $(document).ready(function () {
 				slidesPerView: 4,
 				spaceBetween: 60,
 				loop: true,
+				speed: 1000,
 				mousewheel: isMousewheel,
 				breakpoints: {
 					769: {
