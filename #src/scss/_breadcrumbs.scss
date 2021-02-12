@@ -35,6 +35,10 @@
 		@media (max-width: 1200px) {
 			@include adaptiv(font-size, 12, 10, 1200, 320);
 		}
+
+		&:hover {
+			text-decoration-line: none;
+		}
 	}
 
 	.home {

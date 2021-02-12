@@ -1,6 +1,7 @@
 .catalog {
 	padding-bottom: 50px;
 	background: #d2b6a8;
+	max-width: 100%;
 	@media (max-width: 768px) {
 		padding-bottom: 76px;
 	}
@@ -13,6 +14,7 @@
 	&__slider {
 		overflow: hidden;
 		padding-bottom: 110px;
+		// max-width: 100%;
 		@media (max-width: 1199px) {
 			padding-bottom: 50px;
 		}

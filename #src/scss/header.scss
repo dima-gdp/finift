@@ -20,12 +20,18 @@
 		padding: 50px 40px;
 		min-height: 100vh;
 		background: $light-color;
+		@media (max-height: 790px) {
+			padding: 30px 40px;
+		}
 	}
 	// .header__logo
 	&__logo {
 		margin-bottom: 100px;
 		@media (max-width: 1320px) {
 			margin-bottom: 0;
+		}
+		@media (max-height: 790px) {
+			margin-bottom: 60px;
 		}
 	}
 	// .header__nav
@@ -105,7 +111,7 @@
 			margin-bottom: 20px;
 		}
 
-		&--active {
+		&.current {
 			.nav-header-top__link {
 				color: $hover-text;
 			}
@@ -117,6 +123,10 @@
 		line-height: 1.5;
 		text-transform: uppercase;
 		color: #000000;
+		transition: 0.3s;
+		&:hover {
+			color: $hover-text;
+		}
 	}
 	// .nav-header-top__dropdown
 	&__dropdown {
@@ -129,7 +139,7 @@
 			margin-bottom: 20px;
 		}
 
-		&--active {
+		&.current {
 			.nav-header-bot__link {
 				color: $hover-text;
 			}
@@ -141,6 +151,10 @@
 		line-height: 1.5;
 		text-transform: uppercase;
 		color: #000000;
+		transition: 0.3s;
+		&:hover {
+			color: $hover-text;
+		}
 	}
 }
 
@@ -148,24 +162,28 @@
 	// .tels-header__item
 	&__item {
 		&:not(:last-child) {
-			margin-bottom: 11px;
+			margin-bottom: 5px;
 		}
 	}
 	// .tels-header__link
 	&__link {
 		font-weight: 700;
 		font-size: 16px;
-		line-height: 1/6;
+		line-height: 1.6;
 		text-transform: uppercase;
 		color: #000000;
+		transition: 0.3s;
+		&:hover {
+			color: $hover-text;
+		}
 	}
 }
 
-.submenu-main {
-	position: absolute;
+.vsplivashki {
+	position: fixed;
 	top: 0;
 	left: 0;
-	min-height: 100%;
+	height: 100%;
 	width: 400px;
 	padding: 50px 60px;
 	display: flex;
@@ -176,15 +194,24 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.3s;
+	overflow: auto;
 	&--active {
 		visibility: visible;
 		opacity: 1;
-		left: 100%;
+		left: 300px;
 		transform: translateX(0);
 	}
 	@media (max-width: 1320px) {
 		display: none;
 	}
+}
+
+.submenu-main {
+	display: none;
+	&--active {
+		display: block;
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -278,6 +305,12 @@
 		color: #000000;
 		border: 1px solid #d2b6a8;
 		background: #fff;
+		transition: 0.3s;
+		&:hover {
+			color: #fff;
+			background: #a98e80;
+			border: 1px solid #a98e80;
+		}
 	}
 	@media (max-width: 576px) {
 		.logo__subtitle {

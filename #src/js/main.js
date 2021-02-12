@@ -3,13 +3,21 @@ $(document).ready(function () {
 	let slider_catalog;
 	let slider_product_main;
 	const isMousewheel = $(window).innerWidth() <= 1320 ? false : true;
+	const subMenusMain = $('.submenu-main')
 
 	// Menu
 	$('.nav-header-top__link').click(function (ev) {
 		ev.preventDefault()
-		// $('.submenu-main').removeClass('submenu-main--active')
-		// $(ev.target).next('.submenu-main').addClass('submenu-main--active')
+		let target = subMenusMain.eq($(this).closest('.nav-header-top__item').index())
+
+		if (!target.hasClass('submenu-main--active')) {
+			$('.submenu-main').removeClass('submenu-main--active')
+			$('.vsplivashki').addClass('vsplivashki--active')
+			target.addClass('submenu-main--active')
+		}
+
 	})
+
 
 	const burger = $('.mob-header__btn')
 	const mobMenu = $('.mob-menu');
@@ -78,19 +86,28 @@ $(document).ready(function () {
 
 	toggleTabs('.item-delivery__top', '.item-delivery__bot', 'item-delivery__top--active')
 
+	const nameHeroSlider = $('.control-hero__text')
 
 	// Swiper
 	const slider_pag = new Swiper('.hero__slider', {
 		slidesPerView: 1,
 		effect: 'fade',
 		speed: 500,
+		navigation: {
+			nextEl: '.hero__btn-n',
+			prevEl: '.hero__btn-p',
+		},
 		fadeEffect: {
 			crossFade: true
 		},
 		loop: false,
-		navigation: {
-			nextEl: '.hero__btn-n',
-			prevEl: '.hero__btn-p',
+		on: {
+			slideChange: function () {
+				nameHeroSlider.html($(this.slides[this.realIndex]).attr('data-name'))
+				nameHeroSlider.removeClass('control-hero__text--active')
+				nameHeroSlider.addClass('control-hero__text--active')
+
+			},
 		},
 		breakpoints: {
 			993: {
@@ -108,6 +125,7 @@ $(document).ready(function () {
 	const slider_product = new Swiper('.similar__slider', {
 		slidesPerView: 4,
 		spaceBetween: 60,
+		loop: true,
 		mousewheel: isMousewheel,
 		pagination: {
 			el: '.similar__pagination',
@@ -118,7 +136,6 @@ $(document).ready(function () {
 			320: {
 				slidesPerView: 1,
 				spaceBetween: 30,
-				// mousewheel: false,
 			},
 			375: {
 				slidesPerView: 2,
@@ -147,7 +164,6 @@ $(document).ready(function () {
 			1321: {
 				slidesPerView: 3,
 				spaceBetween: 60,
-				// mousewheel: true,
 			},
 			1450: {
 				slidesPerView: 4,
@@ -271,15 +287,18 @@ $(document).ready(function () {
 		buttons: '',
 	});
 
-	// $('[data-fancybox="to-privacy"]').fancybox({
-	// 	src: '#modal',
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-polit"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
+
+	$('[data-fancybox="product"]').fancybox({
+		backFocus: false,
+	});
 
 	// Input-mask
-	// $('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
+	$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
 
 
@@ -293,13 +312,12 @@ $(document).ready(function () {
 		mobMenu.removeClass('active')
 	})
 
-	console.log(mobMenu)
-
 	$(document).click(function (ev) {
 		if (!ev.target.closest('.mob-header__btn') && !ev.target.closest('.mob-menu__container')) {
 			mobMenu.removeClass('active')
 		}
-		if (!ev.target.closest('.header')) {
+		if (!ev.target.closest('.header') && !ev.target.closest('.vsplivashki')) {
+			$('.vsplivashki').removeClass('vsplivashki--active')
 			$('.submenu-main').removeClass('submenu-main--active')
 		}
 	})
@@ -319,7 +337,8 @@ $(document).ready(function () {
 				{
 					preset: 'islands#redIcon',
 					iconLayout: 'default#image',
-					iconImageSize: [20, 28],
+					iconImageHref: '../img/map.svg',
+					iconImageSize: [24, 35],
 					// iconImageOffset: [-19, -52]
 				});
 
@@ -330,12 +349,13 @@ $(document).ready(function () {
 
 
 	// Alertify
-	// alertify.set('notifier', 'position', 'bottom-right');
-	// alertify.set('notifier', 'delay', 10);
+	alertify.set('notifier', 'position', 'bottom-right');
+	alertify.set('notifier', 'delay', 10);
 
-	// document.addEventListener('wpcf7mailsent', function (event) {
-	// 	alertify.success(event.detail.apiResponse.message)
-	// }, false);
+	document.querySelector('.form-modal-buy__btn').addEventListener('click', function (event) {
+		event.preventDefault()
+		alertify.success('Ваш заказ создан')
+	}, false);
 
 	// document.addEventListener('wpcf7invalid', function (event) {
 	// 	alertify.warning(event.detail.apiResponse.message);

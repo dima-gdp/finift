@@ -1,25 +1,90 @@
 @@include('header.html')
 
-<div class="mob-header">
-	<div class="mob-header__container container">
-		<a href="#" class="header__logo logo">
-			<div class="logo__img">
-				<img src="img/logo.svg" alt="">
-			</div>
-			<div class="logo__text">
-				<div class="logo__title">Вологодская финифть
-				</div>
-				<div class="logo__subtitle">Авторские изделия ручной работы</div>
-			</div>
-		</a>
-		<button class="mob-header__btn">МЕНЮ</button>
-	</div>
-</div>
+<body>
+	<div class="wrapper wrapper--overflow">
 
-<div class="main">
-	<div class="container--big">
-		<header class="header">
-			<div class="header__container container">
+		@@include('modal-polit.html')
+		@@include('modal.html')
+		@@include('mobile-menu.html')
+
+		<div class="vsplivashki">
+			<div class="nav-header-top__dropdown submenu-main">
+				<div class="submenu-main__container">
+					<h2 class="submenu-main__title">Серьги</h2>
+					<ul class="submenu-main__list">
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Комплекты</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Серьги</a>
+						</li>
+						<li class="submenu-main__item submenu-main__item--active">
+							<a href="#" class="submenu-main__link">Колье</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Кольца</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Броши</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Браслеты</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Цепи</a>
+						</li>
+					</ul>
+					<ul class="submenu-main__bot">
+						<li>
+							<a href="#">иконы</a>
+						</li>
+						<li>
+							<a href="#">Другие изделия</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-header-top__dropdown submenu-main">
+				<div class="submenu-main__container">
+					<h2 class="submenu-main__title">ювелирные украшения</h2>
+					<ul class="submenu-main__list">
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Комплекты</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Серьги</a>
+						</li>
+						<li class="submenu-main__item submenu-main__item--active">
+							<a href="#" class="submenu-main__link">Колье</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Кольца</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Броши</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Браслеты</a>
+						</li>
+						<li class="submenu-main__item">
+							<a href="#" class="submenu-main__link">Цепи</a>
+						</li>
+					</ul>
+					<ul class="submenu-main__bot">
+						<li>
+							<a href="#">иконы</a>
+						</li>
+						<li>
+							<a href="#">Другие изделия</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="mob-header">
+			<div class="mob-header__container container">
 				<a href="#" class="header__logo logo">
 					<div class="logo__img">
 						<img src="img/logo.svg" alt="">
@@ -30,302 +95,330 @@
 						<div class="logo__subtitle">Авторские изделия ручной работы</div>
 					</div>
 				</a>
-				<nav class="header__nav nav-header">
-					<ul class="nav-header__top nav-header-top">
-						<li class="nav-header-top__item">
-							<a href="" class="nav-header-top__link">Корпоративные изделия</a>
-							<div class="nav-header-top__dropdown submenu">
-								<div class="submenu__container">
-									<h2 class="submenu__title">ювелирные украшения</h2>
-									<ul class="submenu__list">
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Комплекты</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Серьги</a>
-										</li>
-										<li class="submenu__item submenu__item--active">
-											<a href="#" class="submenu__link">Колье</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Кольца</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Броши</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Браслеты</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Цепи</a>
-										</li>
-									</ul>
-									<ul class="submenu__bot">
-										<li>
-											<a href="#">иконы</a>
-										</li>
-										<li>
-											<a href="#">Другие изделия</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li class="nav-header-top__item nav-header-top__item--active">
-							<a href="" class="nav-header-top__link">Индивидуальные изделия</a>
-							<div class="nav-header-top__dropdown submenu">
-								<div class="submenu__container">
-									<h2 class="submenu__title">ювелирные украшения</h2>
-									<ul class="submenu__list">
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Комплекты</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Серьги</a>
-										</li>
-										<li class="submenu__item submenu__item--active">
-											<a href="#" class="submenu__link">Колье</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Кольца</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Броши</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Браслеты</a>
-										</li>
-										<li class="submenu__item">
-											<a href="#" class="submenu__link">Цепи</a>
-										</li>
-									</ul>
-									<ul class="submenu__bot">
-										<li>
-											<a href="#">иконы</a>
-										</li>
-										<li>
-											<a href="#">Другие изделия</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul class="nav-header__bot nav-header-bot">
-						<li class="nav-header-bot__item">
-							<a href="" class="nav-header-bot__link">Доставка и оплата</a>
-						</li>
-						<li class="nav-header-bot__item">
-							<a href="" class="nav-header-bot__link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="header__lang lang">
-					<div class="lang__item">En</div>
-					<div class="lang__item lang__item--active">Ru</div>
-				</div>
-				<div class="header__tels tels-header">
-					<div class="tels-header__item">
-						<a href="" class="tels-header__link">8 (8172) 72-20-04</a>
-					</div>
-					<div class="tels-header__item">
-						<a href="" class="tels-header__link">8 (981) 432-20-10</a>
-					</div>
-				</div>
+				<button class="mob-header__btn">МЕНЮ</button>
 			</div>
-		</header>
+		</div>
 
-		<section class="product__container container">
-			<div class="product__flex">
-				<div class="product__left">
-					<div class="product-gal">
-						<div class="swiper-wrapper product__wrapper">
-							<div class="swiper-slide">
-								<a href="#" class="product-gal__item" style="background-image: url(img/product-1.jpg);">
-									<img src="img/help-product-slider.jpg" class="help-img" alt="">
-								</a>
+		<div class="main">
+			<div class="container--big">
+				<header class="header">
+					<div class="header__container container">
+						<a href="#" class="header__logo logo">
+							<div class="logo__img">
+								<img src="img/logo.svg" alt="">
 							</div>
-							<div class="swiper-slide">
-								<a href="#" class="product-gal__item" style="background-image: url(img/product-2.jpg);">
-									<img src="img/help-product-slider.jpg" class="help-img" alt="">
-								</a>
+							<div class="logo__text">
+								<div class="logo__title">Вологодская финифть
+								</div>
+								<div class="logo__subtitle">Авторские изделия ручной работы</div>
 							</div>
-							<div class="swiper-slide">
-								<a href="#" class="product-gal__item" style="background-image: url(img/product-3.jpg);">
-									<img src="img/help-product-slider.jpg" class="help-img" alt="">
-								</a>
+						</a>
+						<nav class="header__nav nav-header">
+							<ul class="nav-header__top nav-header-top">
+								<li class="nav-header-top__item">
+									<a href="" class="nav-header-top__link">Корпоративные изделия</a>
+									<div class="nav-header-top__dropdown submenu">
+										<div class="submenu__container">
+											<h2 class="submenu__title">ювелирные украшения</h2>
+											<ul class="submenu__list">
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Комплекты</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Серьги</a>
+												</li>
+												<li class="submenu__item submenu__item--active">
+													<a href="#" class="submenu__link">Колье</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Кольца</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Броши</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Браслеты</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Цепи</a>
+												</li>
+											</ul>
+											<ul class="submenu__bot">
+												<li>
+													<a href="#">иконы</a>
+												</li>
+												<li>
+													<a href="#">Другие изделия</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="nav-header-top__item nav-header-top__item--active">
+									<a href="" class="nav-header-top__link">Индивидуальные изделия</a>
+									<div class="nav-header-top__dropdown submenu">
+										<div class="submenu__container">
+											<h2 class="submenu__title">ювелирные украшения</h2>
+											<ul class="submenu__list">
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Комплекты</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Серьги</a>
+												</li>
+												<li class="submenu__item submenu__item--active">
+													<a href="#" class="submenu__link">Колье</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Кольца</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Броши</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Браслеты</a>
+												</li>
+												<li class="submenu__item">
+													<a href="#" class="submenu__link">Цепи</a>
+												</li>
+											</ul>
+											<ul class="submenu__bot">
+												<li>
+													<a href="#">иконы</a>
+												</li>
+												<li>
+													<a href="#">Другие изделия</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="nav-header__bot nav-header-bot">
+								<li class="nav-header-bot__item">
+									<a href="" class="nav-header-bot__link">Доставка и оплата</a>
+								</li>
+								<li class="nav-header-bot__item">
+									<a href="" class="nav-header-bot__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__lang lang">
+							<div class="lang__item">En</div>
+							<div class="lang__item lang__item--active">Ru</div>
+						</div>
+						<div class="header__tels tels-header">
+							<div class="tels-header__item">
+								<a href="" class="tels-header__link">8 (8172) 72-20-04</a>
 							</div>
-							<div class="swiper-slide">
-								<a href="#" class="product-gal__item" style="background-image: url(img/product-4.jpg);">
-									<img src="img/help-product-slider.jpg" class="help-img" alt="">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" class="product-gal__item" style="background-image: url(img/product-1.jpg);">
-									<img src="img/help-product-slider.jpg" class="help-img" alt="">
-								</a>
+							<div class="tels-header__item">
+								<a href="" class="tels-header__link">8 (981) 432-20-10</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="product__right">
-					@@include('breadcrumbs.html')
-					<div class="product-info">
-						<h1 class="product-info__title title">Комплект «Ромашка»</h1>
-						<div class="product-info__price product-info__price--2">
-							<div class="product-info__old">7950₽</div>
-							<div class="product-info__new">6500 ₽</div>
-						</div>
-						<div class="product-gal product-gal--2">
-							<div class="swiper-wrapper product__wrapper">
-								<div class="swiper-slide">
-									<a href="#" class="product-gal__item" style="background-image: url(img/product-1.jpg);">
-										<img src="img/help-product-slider.jpg" class="help-img" alt="">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#" class="product-gal__item" style="background-image: url(img/product-2.jpg);">
-										<img src="img/help-product-slider.jpg" class="help-img" alt="">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#" class="product-gal__item" style="background-image: url(img/product-3.jpg);">
-										<img src="img/help-product-slider.jpg" class="help-img" alt="">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#" class="product-gal__item" style="background-image: url(img/product-4.jpg);">
-										<img src="img/help-product-slider.jpg" class="help-img" alt="">
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#" class="product-gal__item" style="background-image: url(img/product-1.jpg);">
-										<img src="img/help-product-slider.jpg" class="help-img" alt="">
-									</a>
+				</header>
+
+				<section class="product__container container">
+					<div class="product__flex">
+						<div class="product__left">
+							<div class="product-gal">
+								<div class="swiper-wrapper product__wrapper">
+									<div class="swiper-slide">
+										<a href="img/product-1.jpg" class="product-gal__item" data-fancybox="product"
+											style="background-image: url(img/product-1.jpg);">
+											<img src="img/help-product-slider.jpg" class="help-img" alt="">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="img/product-2.jpg" class="product-gal__item" data-fancybox="product"
+											style="background-image: url(img/product-2.jpg);">
+											<img src="img/help-product-slider.jpg" class="help-img" alt="">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="img/product-3.jpg" class="product-gal__item" data-fancybox="product"
+											style="background-image: url(img/product-3.jpg);">
+											<img src="img/help-product-slider.jpg" class="help-img" alt="">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="img/product-4.jpg" class="product-gal__item" data-fancybox="product"
+											style="background-image: url(img/product-4.jpg);">
+											<img src="img/help-product-slider.jpg" class="help-img" alt="">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="img/product-1.jpg" class="product-gal__item" data-fancybox="product"
+											style="background-image: url(img/product-1.jpg);">
+											<img src="img/help-product-slider.jpg" class="help-img" alt="">
+										</a>
+									</div>
 								</div>
 							</div>
-							<div class="product-gal__pagination"></div>
 						</div>
-						<div class="product-info__subtitle">В комплект входят серьги, колье</div>
-						<div class="product-info__content">
-							<div class="product-info__item item-info">
-								<div class="item-info__title">Серьги</div>
-								<div class="item-info__weight">Вес - 2г</div>
-								<div class="item-info__material">Материал: серебро 925, финифть</div>
+						<div class="product__right">
+							@@include('breadcrumbs.html')
+							<div class="product-info">
+								<h1 class="product-info__title title">Комплект «Ромашка»</h1>
+								<div class="product-info__price product-info__price--2">
+									<div class="product-info__old">7950₽</div>
+									<div class="product-info__new">6500 ₽</div>
+								</div>
+								<div class="product-gal product-gal--2">
+									<div class="swiper-wrapper product__wrapper">
+										<div class="swiper-slide">
+											<a href="img/product-1.jpg" class="product-gal__item" data-fancybox="product"
+												style="background-image: url(img/product-1.jpg);">
+												<img src="img/help-product-slider.jpg" class="help-img" alt="">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="img/product-2.jpg" class="product-gal__item" data-fancybox="product"
+												style="background-image: url(img/product-2.jpg);">
+												<img src="img/help-product-slider.jpg" class="help-img" alt="">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="img/product-3.jpg" class="product-gal__item" data-fancybox="product"
+												style="background-image: url(img/product-3.jpg);">
+												<img src="img/help-product-slider.jpg" class="help-img" alt="">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="img/product-4.jpg" class="product-gal__item" data-fancybox="product"
+												style="background-image: url(img/product-4.jpg);">
+												<img src="img/help-product-slider.jpg" class="help-img" alt="">
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="img/product-1.jpg" class="product-gal__item" data-fancybox="product"
+												style="background-image: url(img/product-1.jpg);">
+												<img src="img/help-product-slider.jpg" class="help-img" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="product-gal__pagination"></div>
+								</div>
+								<div class="product-info__subtitle">В комплект входят серьги, колье</div>
+								<div class="product-info__content">
+									<div class="product-info__item item-info">
+										<div class="item-info__title">Серьги</div>
+										<div class="item-info__weight">Вес - 2г</div>
+										<div class="item-info__material">Материал: серебро 925, финифть</div>
+									</div>
+									<div class="product-info__item item-info">
+										<div class="item-info__title">Колье</div>
+										<div class="item-info__weight">Вес - 2г</div>
+										<div class="item-info__material">Материал: серебро 925, финифть</div>
+									</div>
+								</div>
+								<div class="product-info__price product-info__price--1">
+									<div class="product-info__old">7950₽</div>
+									<div class="product-info__new">6500 ₽</div>
+								</div>
+								<a data-src="#modal-buy" data-fancybox class="product-info__btn btn">Заказать</a>
 							</div>
-							<div class="product-info__item item-info">
-								<div class="item-info__title">Колье</div>
-								<div class="item-info__weight">Вес - 2г</div>
-								<div class="item-info__material">Материал: серебро 925, финифть</div>
-							</div>
 						</div>
-						<div class="product-info__price product-info__price--1">
-							<div class="product-info__old">7950₽</div>
-							<div class="product-info__new">6500 ₽</div>
-						</div>
-						<a data-src="#modal-buy" data-fancybox class="product-info__btn btn">Заказать</a>
 					</div>
-				</div>
+				</section>
+
+				<section class="similar container">
+					<h2 class="similar__title title">Похожие товары</h2>
+					<div class="similar__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#" class="product-slide">
+									<div class="product-slide__descr">
+										<h3 class="product-slide__title">Серьги «Ромашка»</h3>
+										<p class="product-slide__subtitle">серебро 925, финифть</p>
+										<div class="product-slide__price">
+											<span class="product-slide__old">7500 ₽</span>
+											<span class="product-slide__new">6500 ₽</span>
+										</div>
+									</div>
+									<div class="product-slide__image">
+										<img src="img/product-slide-1jpg.jpg" alt="">
+										<span>подробнее</span>
+									</div>
+									<div class="product-slide__decor">
+										<div data-src="#modal-buy" class="to-cart">
+											<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
+											<span class="to-cart__text">Заказать</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="product-slide">
+									<div class="product-slide__descr">
+										<h3 class="product-slide__title">Серьги «Ромашка»</h3>
+										<p class="product-slide__subtitle">серебро 925, финифть</p>
+										<div class="product-slide__price">
+											<span class="product-slide__old">7500 ₽</span>
+											<span class="product-slide__new">6500 ₽</span>
+										</div>
+									</div>
+									<div class="product-slide__image">
+										<img src="img/product-slide-1jpg.jpg" alt="">
+										<span>подробнее</span>
+									</div>
+									<div class="product-slide__decor">
+										<div class="to-cart">
+											<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
+											<span class="to-cart__text">Заказать</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="product-slide">
+									<div class="product-slide__descr">
+										<h3 class="product-slide__title">Серьги «Ромашка»</h3>
+										<p class="product-slide__subtitle">серебро 925, финифть</p>
+										<div class="product-slide__price">
+											<span class="product-slide__old">7500 ₽</span>
+											<span class="product-slide__new">6500 ₽</span>
+										</div>
+									</div>
+									<div class="product-slide__image">
+										<img src="img/product-slide-1jpg.jpg" alt="">
+										<span>подробнее</span>
+									</div>
+									<div class="product-slide__decor">
+										<div class="to-cart">
+											<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
+											<span class="to-cart__text">Заказать</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="product-slide">
+									<div class="product-slide__descr">
+										<h3 class="product-slide__title">Серьги «Ромашка»</h3>
+										<p class="product-slide__subtitle">серебро 925, финифть</p>
+										<div class="product-slide__price">
+											<span class="product-slide__old">7500 ₽</span>
+											<span class="product-slide__new">6500 ₽</span>
+										</div>
+									</div>
+									<div class="product-slide__image">
+										<img src="img/product-slide-1jpg.jpg" alt="">
+										<span>подробнее</span>
+									</div>
+									<div class="product-slide__decor">
+										<div class="to-cart">
+											<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
+											<span class="to-cart__text">Заказать</span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="similar__pagination"></div>
+					</div>
+				</section>
 			</div>
-		</section>
+		</div>
 
-		<section class="similar container">
-			<h2 class="similar__title title">Похожие товары</h2>
-			<div class="similar__slider">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<a href="#" class="product-slide">
-							<div class="product-slide__descr">
-								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
-								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<div class="product-slide__price">
-									<span class="product-slide__old">7500 ₽</span>
-									<span class="product-slide__new">6500 ₽</span>
-								</div>
-							</div>
-							<div class="product-slide__image">
-								<img src="img/product-slide-1jpg.jpg" alt="">
-								<span>подробнее</span>
-							</div>
-							<div class="product-slide__decor">
-								<div class="to-cart">
-									<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
-									<span class="to-cart__text">Заказать</span>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#" class="product-slide">
-							<div class="product-slide__descr">
-								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
-								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<div class="product-slide__price">
-									<span class="product-slide__old">7500 ₽</span>
-									<span class="product-slide__new">6500 ₽</span>
-								</div>
-							</div>
-							<div class="product-slide__image">
-								<img src="img/product-slide-1jpg.jpg" alt="">
-								<span>подробнее</span>
-							</div>
-							<div class="product-slide__decor">
-								<div class="to-cart">
-									<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
-									<span class="to-cart__text">Заказать</span>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#" class="product-slide">
-							<div class="product-slide__descr">
-								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
-								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<div class="product-slide__price">
-									<span class="product-slide__old">7500 ₽</span>
-									<span class="product-slide__new">6500 ₽</span>
-								</div>
-							</div>
-							<div class="product-slide__image">
-								<img src="img/product-slide-1jpg.jpg" alt="">
-								<span>подробнее</span>
-							</div>
-							<div class="product-slide__decor">
-								<div class="to-cart">
-									<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
-									<span class="to-cart__text">Заказать</span>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#" class="product-slide">
-							<div class="product-slide__descr">
-								<h3 class="product-slide__title">Серьги «Ромашка»</h3>
-								<p class="product-slide__subtitle">серебро 925, финифть</p>
-								<div class="product-slide__price">
-									<span class="product-slide__old">7500 ₽</span>
-									<span class="product-slide__new">6500 ₽</span>
-								</div>
-							</div>
-							<div class="product-slide__image">
-								<img src="img/product-slide-1jpg.jpg" alt="">
-								<span>подробнее</span>
-							</div>
-							<div class="product-slide__decor">
-								<div class="to-cart">
-									<span class="to-cart__icon" style="background-image: url('img/shopping-bag.svg');"></span>
-									<span class="to-cart__text">Заказать</span>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="similar__pagination"></div>
-			</div>
-		</section>
-	</div>
-</div>
-
-@@include('footer.html')
+		@@include('footer.html')

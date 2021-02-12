@@ -42,13 +42,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+
+	&--overflow {
+		overflow: visible;
+	}
 }
 
 .main {
 	flex: 1 1 auto;
-	&--bg {
-		background: #d2b6a8;
-	}
+	// &--bg {
+	// 	background: #d2b6a8;
+	// }
 	&--flex {
 		display: flex;
 	}
@@ -73,6 +77,10 @@ body {
 
 .dev {
 	color: #632c33;
+	transition: 0.3s;
+	&:hover {
+		color: #fff;
+	}
 }
 
 .help-img {
@@ -107,6 +115,7 @@ body {
 		color: #000000;
 		position: relative;
 		cursor: pointer;
+		transition: 0.3s;
 		&:not(:last-child) {
 			margin-right: 23px;
 		}
@@ -124,6 +133,10 @@ body {
 				transform: translate(-50%, -50%);
 			}
 		}
+
+		&:hover {
+			color: $hover-text;
+		}
 	}
 }
 
@@ -136,6 +149,13 @@ body {
 	text-align: center;
 	justify-content: center;
 	text-transform: uppercase;
+	transition: 0.3s;
+
+	&:hover {
+		border: 1px solid #a98e80;
+		color: #ffffff;
+		background: #a98e80;
+	}
 }
 
 .title {
@@ -162,6 +182,14 @@ body {
 	}
 }
 
+.to-privacy {
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		color: #fff;
+	}
+}
+
 div.wpcf7-response-output,
 div.wpcf7-validation-errors,
 div.wpcf7 .ajax-loader {
@@ -176,8 +204,16 @@ span.wpcf7-not-valid-tip {
 	z-index: 99997;
 }
 
-.wpcf7-not-valid {
-	border-color: red !important;
+.ajs-message {
+	background: #d2b6a8;
+}
+
+.alertify-notifier .ajs-message.ajs-success {
+	font-size: 16px;
+	color: #715648;
+	background: #d2b6a8;
+	text-shadow: none;
+	border: none;
 }
 
 input[type="submit"] {

@@ -127,7 +127,8 @@
 	}
 }
 .product-info {
-	// position: fixed;
+	position: sticky;
+	top: 20px;
 	// .product-info__title
 	&__title {
 		margin-bottom: 30px;
@@ -225,6 +226,8 @@
 		max-width: 303px;
 		width: 100%;
 		border: 1px solid #a98e80;
+		cursor: pointer;
+		user-select: none;
 		@media (max-width: 420px) {
 			max-width: 100%;
 		}

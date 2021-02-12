@@ -65,6 +65,10 @@
 			font-size: 18px;
 			line-height: 1.56;
 			color: #000000;
+			transition: 0.3s;
+			&:hover {
+				color: $hover-text;
+			}
 		}
 	}
 	// .contacts__mail
@@ -72,6 +76,10 @@
 		font-size: 18px;
 		line-height: 1.56;
 		color: #753e42;
+		transition: 0.3s;
+		&:hover {
+			color: $hover-text;
+		}
 	}
 	// .contacts__right
 	&__right {
@@ -87,6 +95,7 @@
 		}
 		@media (max-width: 576px) {
 			margin-right: -20px;
+			height: 350px;
 		}
 	}
 	&__map {
