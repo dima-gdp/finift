@@ -30,9 +30,6 @@
 		@media (max-width: 1320px) {
 			margin-bottom: 0;
 		}
-		@media (max-height: 790px) {
-			margin-bottom: 60px;
-		}
 	}
 	// .header__nav
 	&__nav {
@@ -45,6 +42,14 @@
 	}
 	// .header__tels
 	&__tels {
+	}
+}
+
+.header {
+	.header__logo {
+		@media (max-height: 790px) {
+			margin-bottom: 60px;
+		}
 	}
 }
 

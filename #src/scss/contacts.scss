@@ -20,10 +20,10 @@
 	}
 	// .contacts__left
 	&__left {
-		min-height: 650px;
+		min-height: 590px;
 		padding-bottom: 50px;
 		flex: 0 0 332px;
-		margin-right: 62px;
+		margin-right: 100px;
 		@media (max-width: 992px) {
 			flex: 0 0 306px;
 			margin-right: 40px;
@@ -56,6 +56,9 @@
 			font-size: 18px;
 			line-height: 1.56;
 			color: #000000;
+			@media (max-width: 374px) {
+				font-size: 16px;
+			}
 		}
 	}
 	// .contacts__tels

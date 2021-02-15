@@ -129,8 +129,12 @@ $(document).ready(function () {
 	const slider_product = new Swiper('.similar__slider', {
 		slidesPerView: 4,
 		spaceBetween: 60,
-		loop: true,
+		loop: false,
+		speed: 1000,
 		mousewheel: isMousewheel,
+		mousewheel: {
+			releaseOnEdges: true
+		},
 		pagination: {
 			el: '.similar__pagination',
 			type: 'bullets',
@@ -234,9 +238,12 @@ $(document).ready(function () {
 			slider_catalog = new Swiper('.catalog__slider', {
 				slidesPerView: 4,
 				spaceBetween: 60,
-				loop: true,
+				loop: false,
 				speed: 1000,
 				mousewheel: isMousewheel,
+				mousewheel: {
+					releaseOnEdges: true
+				},
 				breakpoints: {
 					769: {
 						slidesPerView: 3,
