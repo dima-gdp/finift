@@ -20,6 +20,20 @@
     }
   }
 
+  .submenu-main__title {
+    font-size: 18px;
+  }
+
+  @media (max-width: 369px) {
+    .submenu-main__title {
+      margin-bottom: 20px;
+    }
+
+    .submenu-main__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
   // .mob-menu__container
   &__container {
     margin-left: auto;
@@ -305,8 +319,11 @@
     padding-left: 69px;
     padding-right: 25px;
     padding-bottom: 30px;
+    height: calc(100% - 103px);
+    overflow-y: auto;
     @media (max-width: 520px) {
       padding: 40px 20px 40px 20px;
+      height: calc(100% - 91px);
     }
   }
   // .submenu__item

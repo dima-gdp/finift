@@ -314,6 +314,25 @@ $(document).ready(function () {
 
 
 
+	function toggleTabs(top, bottom, topActive) {
+		$(top).on('click', function (ev) {
+			let text = $(this).next(bottom);
+
+			if ($(this).hasClass(topActive)) {
+				text.stop().slideUp();
+				$(this).removeClass(topActive)
+			}
+			else {
+				$(bottom).stop().slideUp();
+				$(top).removeClass(topActive);
+				$(this).addClass(topActive)
+				text.stop().slideDown();
+			}
+		})
+	}
+
+	toggleTabs('.submenu-main__title.slide', '.submenu-main__list', 'active')
+
 
 	// Menu-burger
 	burger.click(function () {

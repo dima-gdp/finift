@@ -101,7 +101,12 @@
 		font-size: 72px;
 		line-height: 1.14;
 		text-transform: uppercase;
-		color: #ffffff;
+		color: #fff;
+		@supports (-webkit-text-stroke: 1px white) {
+			color: transparent;
+			-webkit-text-stroke: 1px white;
+		}
+
 		@media (max-width: 1920px) {
 			@include adaptiv(font-size, 72, 60, 1920, 1320);
 		}
